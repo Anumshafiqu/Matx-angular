@@ -1,93 +1,234 @@
-.link-pages{
-    font-size: 13px;
+.link-pages {
+  font-size: 13px;
 }
+
 .top-navbar {
   position: fixed;
-  top: 0;
   right: 10px;
   left: 272px;
+  z-index: 1010;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.sidebar{
+  position: fixed;
   z-index: 1010;
 }
 
 
-.main-content{
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+a {
+  text-decoration: none;
 }
-a{
-    text-decoration: none;
-}
-.arrow{
-    font-size: 10px;
+
+.arrow {
+  font-size: 10px;
 }
 
 .sidebar-container {
-    height: 100vh; 
-    overflow-y: hidden; 
-    transition: overflow-y 0.1s; 
-  }
-  
+  height: 100vh;
+  overflow-y: hidden;
+  transition: overflow-y 0.1s;
+}
 
-  .sidebar-container:hover {
-    overflow-y: auto; 
-    transition: 0.1s ease-in;
-  }
-  
 
-  .sidebar-container::-webkit-scrollbar {
-    width: 5px;
-  }
-  
-  .sidebar-container::-webkit-scrollbar-thumb {
-    background-color: #888; 
-    border-radius: 4px;
-  }
-  
-  .sidebar-container::-webkit-scrollbar-thumb:hover {
-    background-color: #555; 
-  }
-  .navbar-custom {
-    background-color: #6C63FF; 
-   }
-  .notification {
-    position: relative;
-  }
-  .badge-notification {
-    position: absolute;
-    top: -5px;
-    right: -10px;
-    background-color: #ff4d4d; 
-    color: white;
-    border-radius: 50%;
-    padding: 2px 6px;
-    font-size: 10px;
-  } 
+.sidebar-container:hover {
+  overflow-y: auto;
+  transition: 0.1s ease-in;
+}
 
-  
-  .product-image {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-    vertical-align: middle;
+
+.sidebar-container::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.sidebar-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.navbar-custom {
+  background-color: #6C63FF;
+}
+
+.notification {
+  position: relative;
+}
+
+.badge-notification {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 10px;
+}
+
+
+.product-image {
+  width: 30px;
+  height: 30px;
+  margin-right: 5px;
+  vertical-align: middle;
 }
 
 .badge {
-    padding: 5px 10px;
-    border-radius: 15px;
-    color: white;
-    font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: 500;
 }
 
 .action-icon {
-    cursor: pointer;
-    font-size: 1.2em;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
-  
- 
-  
+td,
+th {
+  padding: 15px;
+  border-bottom: 1px solid lavender;
+}
+
+th {
+  font-size: 13px;
+  color: #888;
+}
+
+.table-size {
+  width: 740px;
+}
+
+.in-stock {
+  color: white;
+  background-color: blueviolet;
+  padding: 3px 5px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.out-of-stock {
+  color: white;
+  background-color: #f44336;
+  padding: 3px 5px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+
+.low-stock {
+  color: black;
+  background-color: orange;
+  padding: 3px 5px;
+  border-radius: 15px;
+  font-weight: 500;
+}
 
 
-  
-  
+/* .image-container {
+  position: relative;
+  width: 200px; 
+  height: 80px; 
+}
+
+
+.overlapping-image {
+  position: absolute;
+  width: 60px;
+  height: 60px; 
+  border-radius: 50%;
+  border: 2px solid #fff;
+  object-fit: cover;
+}
+
+.image-1 {
+  right: 0;
+  z-index: 0.2;
+}
+
+.image-2 {
+  right: 30px; 
+  z-index: 2; 
+}
+
+.image-3 {
+  right: 70px;
+  z-index: 2;
+} */
+
+
+.image-container {
+  position: relative;
+  width: 200px; /* Adjust container width */
+  height: 100px; /* Adjust container height */
+}
+
+/* Common styles for all images */
+.overlapping-image {
+  position: absolute;
+  width: 35px; /* Size of each image */
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover; /* Makes sure the image fits inside the circle */
+}
+
+/* Position the first image */
+.image-1 {
+  left: 0;
+  z-index: 1; /* Image at the bottom */
+}
+
+/* Position the second image slightly overlapping the first */
+.image-2 {
+  left: 25px; /* Adjust the value to control the overlap */
+  z-index: 2; /* Image above the first */
+}
+
+/* Position the third image further to the right, overlapping the second */
+.image-3 {
+  left: 55px; /* Adjust the value to control the overlap */
+  z-index: 3; /* Image on top */
+}
+.image-4{
+  left: 80px; /* Adjust the value to control the overlap */
+  z-index: 3; /* Image on top */
+  line-height: 30px;
+}
+.fa-arrow-right{
+  line-height: 35px;
+  height: 35px;
+  width: 35px;
+}
+
+/* .card {
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.card-header {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.card-header h5 {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+.card-header small {
+  font-size: 12px;
+  color: #666;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+

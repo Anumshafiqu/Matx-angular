@@ -9,6 +9,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TagModule } from 'primeng/tag';
 import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
+import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
+import { ChartModule } from 'primeng/chart';
+
+
 
 @NgModule({
   declarations: [
@@ -23,7 +27,9 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     TagModule,
     RatingModule,
-    ButtonModule
+    ButtonModule,
+    TriStateCheckboxModule,
+    ChartModule
   ],
   providers: [],
   bootstrap: [AppComponent]
