@@ -3,3 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+.card {
+    border-radius: 10px;
+    height: 100%;
+  }
+  .card .card-body h5 {
+    color: #757575;
+  }
+  .card .card-body p {
+    font-size: 1.5rem;
+  }
+  

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component ,HostListener,OnInit} from '@angular/core';
 import { Chart, registerables } from 'chart.js';
 import { ProductService } from '../service/product.service';
 import { Product } from '../domain/product';
@@ -10,7 +10,7 @@ import { Product } from '../domain/product';
 })
 export class DashboardComponent {
   ngOnInit(): void {
-
+    this.updateSidebarState();
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
 
@@ -18,8 +18,8 @@ export class DashboardComponent {
         datasets: [
             {
                 data: [300, 50, 100],
-                backgroundColor: [documentStyle.getPropertyValue('--blue-500'), documentStyle.getPropertyValue('--yellow-500'), documentStyle.getPropertyValue('--green-500')],
-                hoverBackgroundColor: [documentStyle.getPropertyValue('--blue-400'), documentStyle.getPropertyValue('--yellow-400'), documentStyle.getPropertyValue('--green-400')]
+                backgroundColor: [documentStyle.getPropertyValue('--red-500'), documentStyle.getPropertyValue('--orange-500'), documentStyle.getPropertyValue('--blue-500')],
+                hoverBackgroundColor: [documentStyle.getPropertyValue('--red-400'), documentStyle.getPropertyValue('--orange-400'), documentStyle.getPropertyValue('--blue-400')]
             }
         ]
     };
@@ -157,6 +157,59 @@ options: any;
     //         }
     //     }
     // };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    progressValue = 50; // Set to any value from 0 to 100
+
+    // Optionally, create a method to update progress dynamically
+    updateProgress(value: number) {
+      this.progressValue = value;
+    }
+    isCollapsed: boolean = true;
+    isLargeScreen: boolean = window.innerWidth >= 992; // Detect if it's a large screen initially
+  
+    // ngOnInit(): void {
+    //   this.updateSidebarState();
+    // }
+  
+    toggleSidebar() {
+      this.isCollapsed = !this.isCollapsed;
+    }
+  
+    @HostListener('window:resize', ['$event'])
+    onResize(event: any) {
+      this.isLargeScreen = event.target.innerWidth >= 992;
+      this.updateSidebarState();
+    }
+  
+    private updateSidebarState() {
+      // If on large screens, make sure the sidebar is always visible
+      if (this.isLargeScreen) {
+        this.isCollapsed = false;
+      } else {
+        this.isCollapsed = true;
+      }
+    }
+    
+
 }
 
 

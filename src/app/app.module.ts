@@ -11,6 +11,8 @@ import { RatingModule } from 'primeng/rating';
 import { ButtonModule } from 'primeng/button';
 import { TriStateCheckboxModule } from 'primeng/tristatecheckbox';
 import { ChartModule } from 'primeng/chart';
+import { CardModule } from 'primeng/card';
+
 
 
 
@@ -29,7 +31,8 @@ import { ChartModule } from 'primeng/chart';
     RatingModule,
     ButtonModule,
     TriStateCheckboxModule,
-    ChartModule
+    ChartModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
