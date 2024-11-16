@@ -1,3 +1,95 @@
+
+/* Sidebar Styles */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: #f8f9fa;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1030;
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.sidebar.hide {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 992px) {
+  .sidebar {
+    transform: translateX(0); /* Always visible on large screens */
+  }
+}
+
+/* Main Content Styling */
+.main-content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0; /* Reset margin on small screens */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a {
+  text-decoration: none;
+}
+
+.arrow {
+  font-size: 10px;
+}
+.main-dash{
+  background-color: red;
+}
+body{
+  background-color: #888;
+}
+
 .link-pages {
   font-size: 13px;
 }
@@ -37,19 +129,6 @@ a {
   transition: 0.1s ease-in;
 }
 
-
-.sidebar-container::-webkit-scrollbar {
-  width: 5px;
-}
-
-.sidebar-container::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 4px;
-}
-
-.sidebar-container::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
 
 .navbar-custom {
   background-color: #6C63FF;
@@ -100,10 +179,9 @@ th {
   font-size: 13px;
   color: #888;
 }
-
-.table-size {
+/* .table-size {
   width: 650px;
-}
+}  */
 
 .in-stock {
   color: white;
@@ -130,39 +208,36 @@ th {
 }
 .image-container {
   position: relative;
-  width: 200px; /* Adjust container width */
-  height: 100px; /* Adjust container height */
+  width: 200px; 
+  height: 100px; 
 }
 
-/* Common styles for all images */
 .overlapping-image {
   position: absolute;
-  width: 35px; /* Size of each image */
+  width: 35px;
   height: 35px;
   border-radius: 50%;
-  object-fit: cover; /* Makes sure the image fits inside the circle */
+  object-fit: cover; 
 }
 
-/* Position the first image */
+
 .image-1 {
   left: 0;
-  z-index: 1; /* Image at the bottom */
+  z-index: 1; 
 }
 
-/* Position the second image slightly overlapping the first */
 .image-2 {
-  left: 25px; /* Adjust the value to control the overlap */
-  z-index: 2; /* Image above the first */
+  left: 25px;
+  z-index: 2; 
 }
 
-/* Position the third image further to the right, overlapping the second */
 .image-3 {
-  left: 55px; /* Adjust the value to control the overlap */
-  z-index: 3; /* Image on top */
+  left: 55px; 
+  z-index: 3;
 }
 .image-4{
-  left: 80px; /* Adjust the value to control the overlap */
-  z-index: 3; /* Image on top */
+  left: 80px;
+  z-index: 3; 
   line-height: 30px;
 }
 .fa-arrow-right{
@@ -170,21 +245,172 @@ th {
   height: 35px;
   width: 35px;
 }
+/* .traffic-chart{
+  width: 200px;
+} */
+/* .card-1{
+  margin-left: 100px;
+} */
 
+#sidebar {
+  width: 17rem;
+  transition: transform 0.3s ease;
+}
 
+.right-content{
+  margin-left: 272px;
+  width: 81%;
+  height: 85vh;
+}
+/* #myChart{
+  width: 50%;
+  height: 27rem;
+}
+ .chart-container {
+  width: 100%;
+  height: 27rem;
 
-
-
-@media (max-width: 991px) { /* Small screens (Bootstrap LG breakpoint) */
-  #sidebar {
-display: none !important;
-  }
-
-  .table-size {
+}  */
+  /* .chart-container{
+    height: 25rem;
     width: 100%;
-  }
+  } */
+
+
+
+.card-image{
+  margin-top: 50px;
 
 }
+.proj-2{
+  margin-left: 100px;
+}
+
+@media (max-width: 1300px) {
+  .right-content{
+    margin-left: 270px;
+    width: 79%;
+    height: 90vh;
+  }
+  .canvas{
+    width: 80%;
+    height: 27rem;
+  }
+}
+@media (max-width: 1200px){
+  .right-content{
+    margin-left: 270px;
+    width: 77%;
+    height: 90vh;
+  }
+  .canvas{
+    width: 80%;
+    height: 27rem;
+  }
+}
+@media (max-width: 1100px){
+  .right-content{
+    /* margin-left: 270px; */
+    width: 75%;
+    height: 90vh;
+  }
+  .canvas{
+    width: 80%;
+    height: 27rem;
+  }
+}
+ @media (max-width: 1000px){
+  .right-content{
+    width: 105%;
+    height: 90vh;
+    margin-left: 0;
+  }
+  .canvas{
+    width: 90%;
+    height: 27rem;
+  }
+  .sidebar{
+    display: none !important;
+  }
+  .navbar{
+    width: 100%;
+  }
+ } 
+ @media (max-width: 500px){
+  .canvas{
+    width: 10%;
+    height: 20rem;
+  }
+  .right-content{
+    width: 100%;
+    height: 90vh;
+    margin-left: 0;
+    background-size: cover;
+  }
+.table-size{
+  /* overflow-x: scroll; */
+  width: 100%;
+}
+.card-active{
+  margin-bottom: 15px;
+}
+ .proj-1{
+  display: none !important;
+  margin: 0 !important;
+  margin-top: 0;
+} 
+
+.card-image{
+  margin-top: 0px;
+
+}
+.proj-2{
+  margin-left: 0px;
+  display: none !important;
+}
+.chart-container{
+height: 25rem;
+width: 100%;
+}
+ .chart-container {
+  max-width: 100%;
+  height: 27rem;
+}
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
 
 
 

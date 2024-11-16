@@ -16,10 +16,11 @@ import { CardModule } from 'primeng/card';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,794 +1,451 @@
 <div class="container-fluid">
-    <div class="row">
-        <!-- Sidebar -->
-        <nav
-            class="col-xxl-3 col-xl-3 col-lg-3 col-md-2 col-sm-2 d-md-block bg-dark text-white
-             sidebar w-17rem  p-3 mt-0"
-             id="sidebar">
+  <div class="row">
 
-      
-             
-            <div class="mt-0">
-                <div class="d-flex mx-2">
-                    <img src="../../../assets/logo.png" alt="" width="20" height="20">
-                    <h6 class="fw-medium text-white mx-2">MatX</h6>
-                </div>
-                <div class="d-flex mx-3 mt-5">
-                    <img src="../../../assets/face-7.jpg" alt="" class="w-3rem h-3rem rounded-circle">
-                    <div class="text-secondary small">
-                        <small class="text-white mx-3">Watson Joyce</small><br>
-                        <i class="fa-solid fa-gear ml-3"></i>
-                        <i class="fa-solid fa-message mx-2"></i>
-                        <i class="fa-solid fa-right-from-bracket"></i>
-                    </div>
-                </div>
-                <a href="#" class="btn bg-orange-400 btn-block mb-3 text-start text-white ml-4 small mt-4 w-75 p-2">
-                    <i class="fa-solid fa-grip mx-2"></i> Dashboard
-                </a>
-                <div class="sidebar-section px-3">
+  
 
-                    <p class="text-secondary link-pages fw-semibold mt-2 mx-2 mb-2">PAGES</p>
-                    <a href="#"
-                        class="d-flex justify-content-between mt-3 align-items-center text-decoration-none text-light py-1">
-                        <div class="d-flex align-items-center small fw-medium">
-                            <i class="fa-solid fa-user-check small mx-3"></i> Sessions
-                        </div>
-                        <span class="badge bg-primary small ms-auto">6</span>
-                        <i class="fas fa-chevron-right arrow ms-auto"></i>
-                    </a>
-                    <a href="#" class="d-flex align-items-center text-light py-1 small fw-medium mt-3">
-                        <i class="fa-regular fa-square mx-3 small"></i> Blank Page
-                    </a>
-
-
-                    <p class="text-secondary link-pages fw-semibold mx-2 mt-4 mb-3">COMPONENTS</p>
-                    <a href="#" class="d-flex align-items-center fw-medium text-light py-1 small ">
-                        <i class="fa fa-file mx-3" aria-hidden="true"></i>
-                        Forms <i class="fas fa-chevron-right arrow ms-auto small"></i>
-                    </a>
-                    <a href="#" class="d-flex align-items-center text-light py-1 mt-3 fw-medium small">
-                        <i class="fa fa-bars mx-3" aria-hidden="true"></i>Data Table
-                    </a>
-                    <a href="#" class="d-flex align-items-center text-light py-1 small fw-medium mt-3">
-                        <i class="fa-regular fa-square-check mx-3"></i> Material Kit
-                    </a>
-
-
-                    <p class="text-secondary link-pages fw-semibold mx-2 mt-4 mb-2">OTHERS</p>
-                    <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-4">
-                        <i class="fas fa-icons icon mx-3"></i> Icons
-                    </a>
-                    <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-3">
-                        <i class="fa fa-align-center mx-3" aria-hidden="true"></i>
-                        Multi level <i class="fas fa-chevron-right arrow ms-auto small"></i>
-                    </a>
-                    <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-3">
-                        <i class="fas fa-file-alt icon mx-3"></i>Documenataton
-                    </a>
-                    <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-3">
-                        <i class="fa fa-caret-square-down mx-3" aria-hidden="true"></i> Upgrade to PRO
-                    </a>
-                </div>
+    <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2  d-none d-lg-block bg-dark text-white bg-dark sidebar text-white
+    sidebar w-17rem d-flex  p-3 mt-0">
+      <div class="" id="navbarNav"  [class.open]="isSidebarOpen">
+        <div class="mt-0">
+          <div class="d-flex mx-2">
+            <img src="../../../assets/logo.png" alt="Logo" width="20" height="20">
+            <h6 class="fw-medium text-white mx-2">MatX</h6>
+          </div>
+          <div class="d-flex mx-3 mt-5">
+            <img src="../../../assets/face-7.jpg" alt="Profile" class="w-3rem h-3rem rounded-circle">
+            <div class="text-secondary small">
+              <small class="text-white mx-3">Watson Joyce</small><br>
+              <i class="fa-solid fa-gear ml-3"></i>
+              <i class="fa-solid fa-message mx-2"></i>
+              <i class="fa-solid fa-right-from-bracket"></i>
             </div>
-        </nav>
+          </div>
+          <a href="#" class="btn bg-orange-400 btn-block mb-3 text-start text-white ml-4 small mt-4 small p-2">
+            <i class="fa-solid fa-grip mx-2"></i> Dashboard
+          </a>
+          <div class="sidebar-section px-3">
+            <p class="text-secondary link-pages fw-semibold mt-2 mx-2 mb-2">PAGES</p>
+            <a href="#"
+              class="d-flex justify-content-between align-items-center text-decoration-none text-light py-1 small">
+              <div class="d-flex align-items-center small fw-medium">
+                <i class="fa-solid fa-user-check mx-3"></i> Sessions
+              </div>
+              <span class="badge bg-primary small ms-auto">6</span>
+              <i class="fas fa-chevron-right arrow ms-auto"></i>
+            </a>
+            <a href="#" class="d-flex align-items-center text-light py-1 small fw-medium mt-3">
+              <i class="fa-regular fa-square mx-3"></i> Blank Page
+            </a>
+            <p class="text-secondary link-pages fw-semibold mx-2 mt-4 mb-3">COMPONENTS</p>
+            <a href="#" class="d-flex align-items-center fw-medium text-light py-1 small">
+              <i class="fa fa-file mx-3"></i> Forms <i class="fas fa-chevron-right arrow ms-auto small"></i>
+            </a>
+            <a href="#" class="d-flex align-items-center text-light py-1 mt-3 fw-medium small">
+              <i class="fa fa-bars mx-3"></i>Data Table
+            </a>
+            <a href="#" class="d-flex align-items-center text-light py-1 small fw-medium mt-3">
+              <i class="fa-regular fa-square-check mx-3"></i> Material Kit
+            </a>
+            <p class="text-secondary link-pages fw-semibold mx-2 mt-4 mb-2">OTHERS</p>
+            <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-4">
+              <i class="fas fa-icons mx-3"></i> Icons
+            </a>
+            <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-3">
+              <i class="fa fa-align-center mx-3"></i> Multi level <i
+                class="fas fa-chevron-right arrow ms-auto small"></i>
+            </a>
+            <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-3">
+              <i class="fas fa-file-alt icon mx-3"></i> Documentation
+            </a>
+            <a href="#" class="d-flex align-items-center text-light py-1 fw-medium small mt-3">
+              <i class="fa fa-caret-square-down mx-3"></i> Upgrade to PRO
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #8a4fff;">
+      <button 
+      class="navbar-toggler d-lg-none" 
+      type="button" 
+      (click)="toggleSidebar()" 
+      aria-label="Toggle Sidebar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <div class="container-fluid">
+        <div class="mx-0 px-3 p-2 ms-auto">
+          <div class="d-flex align-items-center">
+            <a href="#" class="text-white me-2">
+              <i class="fas fa-search"></i>
+            </a>
+            <div class="notification mx-4">
+              <a href="#" class="text-white">
+                <i class="fas fa-bell"></i>
+                <span class="badge-notification">3</span>
+              </a>
+            </div>
+            <div class="user-avatar">
+              <img src="../../../assets/face-7.jpg" class="w-2rem h-2rem rounded-circle mx-3">
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="row">
 
-        <!-- Main content -->
-        <main class="col-md-8 col-lg-12 mt-0 " style="background-color: #8a4fff; height: 105vh;
-        margin-left: 265px; width: 80%;">
-            <nav class="navbar navbar-expand-lg top-navbar mt-0" style="background-color: #8a4fff;">
-                <div class="container-fluid mx-0 p-3">
-
-          
-                    <div class="d-flex align-items-center ms-auto">
-                        <a href="#" class="text-white me-2">
-                            <i class="fas fa-search"></i>
-                        </a>
-                        <div class="notification mx-4">
-                            <a href="#" class="text-white">
-                                <i class="fas fa-bell"></i>
-                                <span class="badge-notification">3</span>
-                            </a>
-                        </div>
-                        <div class="user-avatar">
-                            <img src="../../../assets/face-7.jpg" class="w-2rem h-2rem rounded-circle mx-3">
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- chart -->
-            <div class="mt-8 p-0">
-                <div class="mx-0">
-                    <div class="text-white">
+    
+      <main class="col-xxl-8 col-lg-7 col-md-5 col-sm-7 right-content "
+       style="background-color: #8a4fff;">
+        <!-- <div class="text-white">
                         <h5 class="py-3 small fw-bold">Last 12 Months Sales</h5>
                         <canvas id="myChart" class="h-27rem"></canvas>
-                    </div>
-                </div>
-            </div>
-
-
-            <div class="container-fluid">
-                <div class="row">
-                    <!-- Left Side (Cards) -->
-                    <div class="col-md-8">
-                        <!-- Row for First Two Cards -->
-                        <div class="row mt-5 mb-3">
-                            <div class="col-md-6">
-                                <div class="card py-2 shadow-sm border-0">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <i class="fa fa-users fs-3 mt-1  text-blue-600" aria-hidden="true"></i>
-                                            <div class="text-secondary small mx-3">
-                                                <span class="mb-0">New leads</span><br>
-                                                <small class="text-blue-600">3,050</small>
-                                            </div>
-                                            <div class="ms-auto mt-2 mx-3">
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="card py-2 shadow-sm border-0">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <i class="fas fa-dollar-sign fs-3 mt-1 text-blue-600"
-                                                aria-hidden="true"></i>
-                                            <div class="text-secondary small mx-3">
-                                                <span class="mb-0">New leads</span><br>
-                                                <small class="text-blue-600">3,050</small>
-                                            </div>
-                                            <div class="ms-auto mt-2 mx-3">
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    </div> -->
+        <div class="text-white">
+          <h5 class="py-3 small fw-bold">Last 12 Months Sales</h5>
+          <div class="chart-container">
+            <canvas id="myChart" class="chart-container w-100 h-25rem"></canvas>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="row">
+            <!-- Left Side (Cards) -->
+            <div class="col-md-8">
+              <!-- Row for First Two Cards -->
+              <div class="row mt-5 mb-3">
+                <div class="col-md-6 card-active">
+                  <div class="card py-2 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <i class="fa fa-users fs-3 mt-1  text-blue-600" aria-hidden="true"></i>
+                        <div class="text-secondary small mx-3">
+                          <span class="mb-0">New leads</span><br>
+                          <small class="text-blue-600">3,050</small>
                         </div>
-
-                        <!-- Row for Second Two Cards -->
-                        <div class="row mb-0">
-                            <div class="col-md-6">
-                                <div class="card py-2 shadow-sm border-0">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <i class="fas fa-warehouse fs-3 mt-1 text-orange-600"
-                                                aria-hidden="true"></i>
-                                            <div class="text-secondary small mx-3">
-                                                <span class="mb-0">New leads</span><br>
-                                                <small class="text-orange-600">3,050</small>
-                                            </div>
-                                            <div class="ms-auto mt-2 mx-3">
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <div class="card py-2 shadow-sm border-0">
-                                    <div class="card-body">
-                                        <div class="d-flex">
-                                            <i class="fas fa-shopping-cart fs-3 mt-1 text-orange-600"
-                                                aria-hidden="true"></i>
-                                            <div class="text-secondary small mx-3">
-                                                <span class="mb-0">New leads</span><br>
-                                                <small class="text-orange-600">3,050</small>
-                                            </div>
-                                            <div class="ms-auto mt-2 mx-3">
-                                                <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="col-md-12">
-                                <div class="table-size mt-4 shadow-sm ml-2">
-                                    <p-table [value]="products" class="table">
-                                        <ng-template pTemplate="header" class="bg-white">
-                                            <tr>
-                                                <th>Name</th>
-                                                <th>Revenue</th>
-                                                <th>Stock Status</th>
-                                                <th>Action</th>
-                                            </tr>
-                                        </ng-template>
-                                        <ng-template pTemplate="body" let-product>
-                                            <tr>
-                                                <td class="small text-dark">
-                                                    <img src="../../../assets/headphone-2.jpg" alt="Product Image"
-                                                        class="product-image" />
-                                                    {{ product.name }}
-                                                </td>
-                                                <td class="small text-dark">{{ product.revenue | currency:'USD'}}
-                                                </td>
-                                                <td class="small text-dark">
-                                                    <span [ngClass]="{
-                                                'in-stock': product.stockStatus === 'in stock',
-                                                'out-of-stock': product.stockStatus === 'out of stock',
-                                                'low-stock': product.stockStatus.includes('available')
-                                            }">
-                                                        {{ product.stockStatus }}
-                                                    </span>
-                                                </td>
-                                                <td>
-                                                    <i class="fa fa-pencil text-primary  " aria-hidden="true"></i>
-                                                </td>
-                                            </tr>
-                                        </ng-template>
-                                    </p-table>
-                                </div>
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="row mb-0 mt-3 mx-1">
-                                <div class="col-md-6">
-                                    <div class="card  shadow-sm border-0">
-                                        <div class="card-body">
-                                            <div class="d-flex">
-                                                <i class="fa fa-line-chart small text-white ml-2 p-3 bg-blue-600 rounded-circle"
-                                                    aria-hidden="true"></i>
-                                                <div class="text-blue-600 small mx-2 mt-2">
-                                                    <span class="fw-medium ">Active Users</span><br>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex mx-3 mt-2">
-                                                <p class="fw-bold mx-2 fs-4 text-secondary">10.8k</p>
-                                                <small class="ms-auto text-blue-600 "> <i
-                                                        class="fa fa-angle-up p-1 m-1 small text-white bg-blue-600 rounded-circle"
-                                                        aria-hidden="true"></i>(+21%)</small>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-
-                                    <div class="card  shadow-sm border-0">
-                                        <div class="card-body">
-                                            <div class="d-flex">
-                                                <i class="fa fa-star small text-white ml-3  p-3 bg-red-600 rounded-circle"
-                                                    aria-hidden="true"></i>
-                                                <div class="text-blue-600 small mt-2 mx-2">
-                                                    <span class="mb-0 fw-medium">Transactions</span><br>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex mx-3 mt-2">
-                                                <p class="fw-bold mx-2 fs-4 text-secondary">$2.3M</p>
-                                                <small class="ms-auto text-red-600 mt-2"> <i
-                                                        class="fa fa-angle-up p-1 m-1 small text-white bg-red-600 rounded-circle"
-                                                        aria-hidden="true"></i>(+21%)</small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-4 col-sm-4 ml-2 table-size">
-                                <p class="my-3 fw-medium mx-1">Ongoing Projects</p>
-                                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem">
-                                    <div class="d-flex text-center mt-7">
-                                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox"
-                                            class="rounded-0" />
-                                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                                        " aria-hidden="true"></i>
-                                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                                        <div class="image-container ml-5">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 1"
-                                                class="overlapping-image image-1">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 2"
-                                                class="overlapping-image image-2">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 3"
-                                                class="overlapping-image image-3">
-                                            <p
-                                                class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
-                                                3+
-                                            </p>
-                                        </div>
-                                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-
-                                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3">
-                                    <div class="d-flex text-center mt-7">
-                                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox"
-                                            class="rounded-0" />
-                                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                                        " aria-hidden="true"></i>
-                                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                                        <div class="image-container ml-5">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 1"
-                                                class="overlapping-image image-1">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 2"
-                                                class="overlapping-image image-2">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 3"
-                                                class="overlapping-image image-3">
-                                            <p
-                                                class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
-                                                3+
-                                            </p>
-                                        </div>
-                                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <!-- card3 -->
-                                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3">
-                                    <div class="d-flex text-center mt-7">
-                                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox"
-                                            class="rounded-0" />
-                                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                                        " aria-hidden="true"></i>
-                                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                                        <div class="image-container ml-5">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 1"
-                                                class="overlapping-image image-1">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 2"
-                                                class="overlapping-image image-2">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 3"
-                                                class="overlapping-image image-3">
-                                            <p
-                                                class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
-                                                3+
-                                            </p>
-                                        </div>
-                                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <!-- card-4 -->
-                                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3 ">
-                                    <div class="d-flex text-center mt-7">
-                                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox"
-                                            class="rounded-0" />
-
-                                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                                        " aria-hidden="true"></i>
-                                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                                        <div class="image-container ml-5">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 1"
-                                                class="overlapping-image image-1">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 2"
-                                                class="overlapping-image image-2">
-                                            <img src="../../../assets/face-4.jpg" alt="Image 3"
-                                                class="overlapping-image image-3">
-                                            <p
-                                                class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
-                                                3+
-                                            </p>
-                                        </div>
-                                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="ms-auto mt-2 mx-3">
+                          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                         </div>
-                    </div>
-
-
-                    <!-- Right Side (Traffic Chart) -->
-
-                    <div class="col-md-4">
-                        <div class="card mt-5 shadow-sm border-0">
-                            <div class="card-body">
-                                <p class="fw-medium mb-0">Traffic Sources</p>
-                                <p class="small text-secondary">Last 30 days</p>
-                                <!-- Chart container, replace with your chart library code -->
-                                <div id="traffic-chart flex justify-content-center">
-                                    <div class="traffic-chart mt-4">
-                                        <p-chart type="doughnut" [data]="data" [options]="options" />
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-around mt-4">
-                                    <span class="small text-secondary"> <i class="fa fa-circle small text-danger"
-                                            aria-hidden="true"></i> Google</span>
-                                    <span class="small text-warning mx-2"> <i class="fa fa-circle small text-warning"
-                                            aria-hidden="true"></i> Facebook</span>
-                                    <span class="badge text-primary"> <i class="fa fa-circle small text-primary"
-                                            aria-hidden="true"></i> Others</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card mt-4 shadow-sm border-0">
-                            <div class="card-body">
-                                <div class="card-1 mt-4">
-                                    <img src="../../../assets/upgrade.svg" alt="" class="w-5rem h-5rem">
-                                </div>
-                                <p class="text-center fw-medium small text-secondary mt-2">Upgrade to <span
-                                        class="fw-bold">MatX PRO</span> for<br>
-                                    more resources</p>
-                                <button
-                                    class="btn mt-2
-                                    mb-3 bg-blue-600 px-4 small text-white shadow-4 card-1 fw-medium "><small>Upgrade</small></button>
-
-                            </div>
-                        </div>
-                        <div class="card mt-4 shadow-sm border-0">
-                            <div class="card-body">
-                                <div>
-                                        <p class="fw-medium">Campaigns</p>
-                                     <small class="text-secondary">Today</small>
-                                      <div class="d-flex ">
-                                      <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
-                                      </div>
-                                      <span class="ms-auto small progress=1 text-gray-500">Google (80k)</span>
-                                    </div>
-                                    <div class="d-flex ">
-                                        <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                          <div class="progress-bar bg-orange-500" style="width: 50%;"></div>
-                                        </div>
-                                        <span class="ms-auto small progress=1 text-gray-500">Facebook (80k)</span>
-                                      </div>
-                                      <div class="d-flex ">
-                                        <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                          <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
-                                        </div>
-                                        <span class="ms-auto small progress=1 text-gray-500">Tensor (80k)</span>
-                                      </div>
-                                    </div>
-                                    <div class="mt-3">
-                                     <small class="text-secondary">Yesterday</small>
-                                      <div class="d-flex ">
-                                      <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
-                                      </div>
-                                      <span class="ms-auto small progress=1 text-gray-500">Google (80k)</span>
-                                    </div>
-                                    <div class="d-flex ">
-                                        <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                          <div class="progress-bar bg-orange-500" style="width: 50%;"></div>
-                                        </div>
-                                        <span class="ms-auto small progress=1 text-gray-500">Facebook (80k)</span>
-                                      </div>
-                                      <div class="d-flex ">
-                                        <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                          <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
-                                        </div>
-                                        <span class="ms-auto small progress=1 text-gray-500">Tensor (80k)</span>
-                                      </div>
-                                    </div>
-                                    <div class="mt-3">
-                                     <small class="text-secondary">Last Month</small>
-                                      <div class="d-flex ">
-                                      <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
-                                      </div>
-                                      <span class="ms-auto small progress=1 text-gray-500">Google (80k)</span>
-                                    </div>
-                                    <div class="d-flex ">
-                                        <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                          <div class="progress-bar bg-orange-500" style="width: 50%;"></div>
-                                        </div>
-                                        <span class="ms-auto small progress=1 text-gray-500">Facebook (80k)</span>
-                                      </div>
-                                      <div class="d-flex ">
-                                        <div class="progress mt-2 rounded-0 w-10rem"style="width: 40%;height: 5px;">
-                                          <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
-                                        </div>
-                                        <span class="ms-auto small progress=1 text-gray-500">Tensor (80k)</span>
-                                      </div>
-                                    </div>
-                                  </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-
-
-            <!-- <div class="container-fluid">
-                <div class="row mt-0">
-                  <!-- Left Column: Table -->
-            <!-- <div class="col-md-8">
-                    <div class="card">
-                      <div class="card-body">
-                        <h6>Inventory</h6>
-                        <table class="table">
-                          <thead>
-                            <tr>
-                              <th>Name</th>
-                              <th>Revenue</th>
-                              <th>Stock Status</th>
-                              <th>Action</th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr>
-                              <td><i class="fas fa-headphones"></i> Earphone</td>
-                              <td>$100</td>
-                              <td><span class="badge bg-warning">15 available</span></td>
-                              <td><i class="fas fa-pen" style="color: purple;"></i></td>
-                            </tr>
-                            <tr>
-                              <td><i class="fas fa-headphones"></i> Earphone</td>
-                              <td>$1500</td>
-                              <td><span class="badge bg-primary">in stock</span></td>
-                              <td><i class="fas fa-pen" style="color: purple;"></i></td>
-                            </tr>
-                            
-                          </tbody>
-                        </table>
-                      </div>
-                    </div>
-                  </div>
-              
-                
-                  <div class="col-md-4">
-                    <div class="card text-center">
-                      <div class="card-body">
-                        <h6>Upgrade to MatX PRO</h6>
-                        <p>for more resources</p>
-                        <img src="upgrade-image.png" alt="Upgrade Image" style="width: 100%; height: auto;">
-                        <button class="btn btn-primary mt-3">UPGRADE</button>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div> - -->
-
-            <!-- <div class="row d-flex flex-row flex-wrap ml-2">
-                <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mt-6 w-22rem
-                mx-2 h-6rem shadow-sm border-0">
-                    <div class="d-flex my-3">
-                        <i class="fa fa-users fs-3 ml-4 mt-3  text-blue-600" aria-hidden="true"></i>
-                        <div class="text-secondary small mt-2 mx-3">
-                            <span class="mb-0">New leads</span><br>
-                            <small class="text-blue-600">3,050</small>
+                <div class="col-md-6">
+                  <div class="card py-2 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <i class="fas fa-dollar-sign fs-3 mt-1 text-blue-600" aria-hidden="true"></i>
+                        <div class="text-secondary small mx-3">
+                          <span class="mb-0">New leads</span><br>
+                          <small class="text-blue-600">3,050</small>
                         </div>
-                        <div class="ms-auto mt-3 mx-3">
-                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <div class="ms-auto mt-2 mx-3">
+                          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                         </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mt-6 w-22rem
-                mx-2 h-6rem shadow-sm border-0">
-                    <div class="d-flex my-3">
-                        <i class="fa fa-users fs-3 ml-4 mt-3  text-blue-600" aria-hidden="true"></i>
-                        <div class="text-secondary small mt-2 mx-3">
-                            <span class="mb-0">New leads</span><br>
-                            <small class="text-blue-600">3,050</small>
+              </div>
+              <!-- Row for Second Two Cards -->
+              <div class="row mb-0 note-1">
+                <div class="col-md-6 card-active">
+                  <div class="card py-2 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <i class="fas fa-warehouse fs-3 mt-1 text-orange-600" aria-hidden="true"></i>
+                        <div class="text-secondary small mx-3">
+                          <span class="mb-0">New leads</span><br>
+                          <small class="text-orange-600">3,050</small>
                         </div>
-                        <div class="ms-auto mt-3 mx-3">
-                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        <div class="ms-auto mt-2 mx-3">
+                          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                         </div>
+                      </div>
                     </div>
-
+                  </div>
                 </div>
-                <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 mt-6
-                mx-2 shadow-sm border-0">
-                <p>Traffic Sources</p>
-                <small>Last 30 days</small>
-                <div>
-                    <div class="">
-                        <p-chart type="doughnut" [data]="data" [options]="options" />
+                <div class="col-md-6 note-1">
+                  <div class="card py-2 shadow-sm border-0">
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <i class="fas fa-shopping-cart fs-3 mt-1 text-orange-600" aria-hidden="true"></i>
+                        <div class="text-secondary small mx-3">
+                          <span class="mb-0">New leads</span><br>
+                          <small class="text-orange-600">3,050</small>
+                        </div>
+                        <div class="ms-auto mt-2 mx-3">
+                          <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                        </div>
+                      </div>
                     </div>
+                  </div>
                 </div>
-                </div>
-           
-        </div> -->
-
-            <!-- <div class="row ml-2">
-                <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 w-22rem
-                mx-2 h-6rem shadow-sm border-0">
-                    <div class="d-flex my-3">
-                        <i class="fa fa-home fs-3 ml-4 mt-3 text-orange-400" aria-hidden="true"></i>
-                        <div class="text-secondary small mt-2 mx-3">
-                            <span class="mb-0">Inventory Status</span><br>
-                            <small class="text-orange-400">8.5% Stock Surplus</small>
-                        </div>
-                        <div class="ms-auto mt-3 mx-3">
-                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-                <!-- second -->
-            <!-- <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 w-22rem
-                 h-6rem shadow-sm border-0">
-                    <div class="d-flex my-3">
-                        <i class="fa fa-cart-arrow-down fs-3 ml-4 mt-3 text-orange-400" aria-hidden="true"></i>
-                        <div class="text-secondary small mt-2 mx-3">
-                            <span class="mb-0">New leads</span><br>
-                            <small class="text-orange-400">3,050</small>
-                        </div>
-                        <div class="ms-auto mt-3 mx-3">
-                            <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div> 
-            </div>  
-            <div class="table-size mt-4 shadow-sm ml-2">
-                <p-table [value]="products" class="table">
-                    <ng-template pTemplate="header" class="bg-white">
-                        <tr>
+                <div class="col-md-12 col-sm-12 col-lg-12">
+                  <div class="table-size mt-4 shadow-sm ml-2">
+                    <div class="table-responsive">
+                      <p-table [value]="products" class="table">
+                        <ng-template pTemplate="header" class="bg-white">
+                          <tr>
                             <th>Name</th>
                             <th>Revenue</th>
                             <th>Stock Status</th>
                             <th>Action</th>
-                        </tr>
-                    </ng-template>
-                    <ng-template pTemplate="body" let-product>
-                        <tr>
+                          </tr>
+                        </ng-template>
+                        <ng-template pTemplate="body" let-product>
+                          <tr>
                             <td class="small text-dark">
-                                <img src="../../../assets/headphone-2.jpg" alt="Product Image" class="product-image" />
-                                {{ product.name }}
+                              <img src="../../../assets/headphone-2.jpg" alt="Product Image" class="product-image" />
+                              {{ product.name }}
                             </td>
-                            <td class="small text-dark">{{ product.revenue | currency:'USD'}}</td>
+                            <td class="small text-dark">{{ product.revenue | currency: 'USD' }}</td>
                             <td class="small text-dark">
-                                <span [ngClass]="{
-                                    'in-stock': product.stockStatus === 'in stock',
-                                    'out-of-stock': product.stockStatus === 'out of stock',
-                                    'low-stock': product.stockStatus.includes('available')
-                                }">
-                                    {{ product.stockStatus }}
-                                </span>
+                              <span [ngClass]="{
+                                                'in-stock': product.stockStatus === 'in stock',
+                                                'out-of-stock': product.stockStatus === 'out of stock',
+                                                'low-stock': product.stockStatus.includes('available')
+                                              }">
+                                {{ product.stockStatus }}
+                              </span>
                             </td>
                             <td>
-                                <i class="fa fa-pencil text-primary  " aria-hidden="true"></i>
+                              <i class="fa fa-pencil text-primary" aria-hidden="true"></i>
                             </td>
-                        </tr>
-                    </ng-template>
-                </p-table>
-            </div>
- 
-
-  
-            <!-- card -->
-            <!-- <div class="row mt-3 ml-1">
-                <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 w-23rem
-                mx-2 h-8rem shadow-sm border-0">
-                    <div class="d-flex my-3">
-                        <i class="fa fa-line-chart small text-white ml-3  p-3 bg-blue-600 rounded-circle"
-                            aria-hidden="true"></i>
-                        <div class="text-blue-600 small mt-2 mx-2">
-                            <span class="mb-0 fw-medium">Active Users</span><br>
-                        </div>
+                          </tr>
+                        </ng-template>
+                      </p-table>
                     </div>
-                    <div class="d-flex mx-3">
-                        <p class="fw-bold mx-2 fs-4 text-secondary">10.8k</p>
-                        <small class="ms-auto text-blue-600 mt-2"> <i
-                                class="fa fa-angle-up p-1 m-1 small text-white bg-blue-600 rounded-circle"
-                                aria-hidden="true"></i>(+21%)</small>
-
-                    </div>
+                  </div>
                 </div>
-                <!-- second -->
-            <!-- <div class="card col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 w-23rem 
-                 h-8rem shadow-sm border-0">
-                    <div class="d-flex my-3">
-                        <i class="fa fa-star small text-white ml-3  p-3 bg-red-600 rounded-circle"
+                <div class="row mt-3 mx-1 ">
+                  <div class="col-md-6 card-active">
+                    <div class="card  shadow-sm border-0">
+                      <div class="card-body">
+                        <div class="d-flex">
+                          <i class="fa fa-line-chart small text-white ml-2 p-3 bg-blue-600 rounded-circle"
                             aria-hidden="true"></i>
-                        <div class="text-blue-600 small mt-2 mx-2">
+                          <div class="text-blue-600 small mx-2 mt-2">
+                            <span class="fw-medium ">Active Users</span><br>
+                          </div>
+                        </div>
+                        <div class="d-flex mx-3 mt-2">
+                          <p class="fw-bold mx-2 fs-4 text-secondary">10.8k</p>
+                          <small class="ms-auto text-blue-600 "> <i
+                              class="fa fa-angle-up p-1 m-1 small text-white bg-blue-600 rounded-circle"
+                              aria-hidden="true"></i>(+21%)</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card  shadow-sm border-0">
+                      <div class="card-body">
+                        <div class="d-flex">
+                          <i class="fa fa-star small text-white ml-3  p-3 bg-red-600 rounded-circle"
+                            aria-hidden="true"></i>
+                          <div class="text-blue-600 small mt-2 mx-2">
                             <span class="mb-0 fw-medium">Transactions</span><br>
+                          </div>
                         </div>
-                    </div>
-                    <div class="d-flex mx-3">
-                        <p class="fw-bold mx-2 fs-4 text-secondary">$2.3M</p>
-                        <small class="ms-auto text-red-600 mt-2"> <i
-                                class="fa fa-angle-up p-1 m-1 small text-white bg-red-600 rounded-circle"
-                                aria-hidden="true"></i>(+21%)</small>
-                    </div>
-                </div>
-            </div>  -->
-
-
-
-            <!-- <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-4 col-sm-4 ml-2 table-size">
-                <p class="my-3 fw-medium mx-1">Ongoing Projects</p>
-                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem">
-                    <div class="d-flex text-center mt-7">
-                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
-                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                        " aria-hidden="true"></i>
-                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                        <div class="image-container ml-5">
-                            <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
-                            <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
-                            <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
-                            <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">3+
-                            </p>
+                        <div class="d-flex mx-3 mt-2">
+                          <p class="fw-bold mx-2 fs-4 text-secondary">$2.3M</p>
+                          <small class="ms-auto text-red-600 mt-2"> <i
+                              class="fa fa-angle-up p-1 m-1 small text-white bg-red-600 rounded-circle"
+                              aria-hidden="true"></i>(+21%)</small>
                         </div>
-                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+                      </div>
                     </div>
+                  </div>
                 </div>
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                  <p class="my-3 fw-medium mx-1">Ongoing Projects</p>
+                  <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem">
+                    <div class="d-flex flex-row text-center card-image">
+                      <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
+                      <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
+                                        " aria-hidden="true"></i>
+                      <small class="fw-medium ml-4 mt-1">Project 1</small>
+                      <small class=" text-secondary mt-1 proj-2">03/02/2020 07:13PM</small>
+                      <div class="image-container ml-5 proj-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
+                        <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
+                        <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
+                          3+
+                        </p>
+                      </div>
+                      <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3">
+                    <div class="d-flex text-center card-image">
+                      <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
+                      <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
+                                        " aria-hidden="true"></i>
+                      <small class="fw-medium ml-4 mt-1">Project 1</small>
+                      <small class=" text-secondary mt-1 proj-2">03/02/2020 07:13PM</small>
+                      <div class="image-container ml-5 proj-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
+                        <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
+                        <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
+                          3+
+                        </p>
+                      </div>
+                      <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <!-- card3 -->
+                  <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3">
+                    <div class="d-flex text-center card-image">
+                      <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
+                      <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
+                                        " aria-hidden="true"></i>
+                      <small class="fw-medium ml-4 mt-1">Project 1</small>
+                      <small class="text-secondary mt-1 proj-2">03/02/2020 07:13PM</small>
+                      <div class="image-container ml-5 proj-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
+                        <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
+                        <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
+                          3+
+                        </p>
+                      </div>
+                      <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <!-- card-4 -->
+                  <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3 ">
+                    <div class="d-flex text-center card-image">
+                      <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
 
-                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3">
-                    <div class="d-flex text-center mt-7">
-                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
-                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                        " aria-hidden="true"></i>
-                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                        <div class="image-container ml-5">
-                            <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
-                            <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
-                            <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
-                            <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">3+
-                            </p>
-                        </div>
-                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+                      <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
+                                        " aria-hidden="true"></i>
+                      <small class="fw-medium ml-4 mt-1 ">Project 1</small>
+                      <small class=" text-secondary mt-1 proj-2">03/02/2020 07:13PM</small>
+                      <div class="image-container ml-5 proj-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
+                        <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
+                        <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
+                        <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">
+                          3+
+                        </p>
+                      </div>
+                      <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
                     </div>
+                  </div>
                 </div>
-                
-                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3">
-                    <div class="d-flex text-center mt-7">
-                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
-                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                        " aria-hidden="true"></i>
-                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                        <div class="image-container ml-5">
-                            <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
-                            <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
-                            <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
-                            <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">3+
-                            </p>
-                        </div>
-                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+              </div>
+            </div>
+            <!-- Right Side (Traffic Chart) -->
+            <div class="col-lg-4 col-md-4 col-sm-12 ">
+              <div class="card mt-5 shadow-sm border-0">
+                <div class="card-body">
+                  <p class="fw-medium mb-0">Traffic Sources</p>
+                  <p class="small text-secondary">Last 30 days</p>
+                  <!-- Chart container, replace with your chart library code -->
+                  <div id=" flex justify-content-center">
+                    <div class="mt-4 w-10rem h-10rem mx-8">
+                      <p-chart type="doughnut" [data]="data" [options]="options" />
                     </div>
+                  </div>
+                  <div class="d-flex justify-content-around mt-4">
+                    <span class="small text-secondary"> <i class="fa fa-circle small text-danger"
+                        aria-hidden="true"></i> Google</span>
+                    <span class="small text-warning mx-2"> <i class="fa fa-circle small text-warning"
+                        aria-hidden="true"></i> Facebook</span>
+                    <span class="badge text-primary"> <i class="fa fa-circle small text-primary" aria-hidden="true"></i>
+                      Others</span>
+                  </div>
                 </div>
-               
-                <div class="card shadow-sm border-0 justify-content-center p-3 h-4rem mt-3 ">
-                    <div class="d-flex text-center mt-7">
-                        <p-triStateCheckbox [(ngModel)]="value" inputId="tricheckbox" class="rounded-0" />
-
-                        <i class="fa fa-arrow-right bg-red-600 px-2 ml-4 rounded-circle text-white
-                        " aria-hidden="true"></i>
-                        <small class="fw-medium ml-4 mt-1">Project 1</small>
-                        <small class="ml-8 text-secondary mt-1">03/02/2020 07:13PM</small>
-                        <div class="image-container ml-5">
-                            <img src="../../../assets/face-4.jpg" alt="Image 1" class="overlapping-image image-1">
-                            <img src="../../../assets/face-4.jpg" alt="Image 2" class="overlapping-image image-2">
-                            <img src="../../../assets/face-4.jpg" alt="Image 3" class="overlapping-image image-3">
-                            <p class="bg-red-600 text-white fw-medium text-center overlapping-image image-4 border">3+
-                            </p>
-                        </div>
-                        <i class="fa fa-ellipsis-v ms-auto mt-2 fw-bold" aria-hidden="true"></i>
+              </div>
+              <div class="card mt-4 shadow-sm border-0 align-items-center">
+                <div class="card-body">
+                  <div class="card-1 mt-4 mx-4">
+                    <img src="../../../assets/upgrade.svg" alt="" class="w-5rem h-5rem">
+                  </div>
+                  <p class="text-center fw-medium small text-secondary mt-2">Upgrade to <span class="fw-bold">MatX
+                      PRO</span> for<br>
+                    more resources</p>
+                  <button
+                    class="btn mt-2 align-items-center mx-4
+                                    mb-3 bg-blue-600 px-4 small text-white shadow-4 card-1 fw-medium "><small>Upgrade</small></button>
+                </div>
+              </div>
+              <div class="card mt-4 shadow-sm border-0">
+                <div class="card-body">
+                  <div>
+                    <p class="fw-medium">Campaigns</p>
+                    <small class="text-secondary">Today</small>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Google (80k)</span>
                     </div>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-orange-500" style="width: 50%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Facebook (80k)</span>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Tensor (80k)</span>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <small class="text-secondary">Yesterday</small>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Google (80k)</span>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-orange-500" style="width: 50%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Facebook (80k)</span>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Tensor (80k)</span>
+                    </div>
+                  </div>
+                  <div class="mt-3">
+                    <small class="text-secondary">Last Month</small>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Google (80k)</span>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-orange-500" style="width: 50%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Facebook (80k)</span>
+                    </div>
+                    <div class="d-flex ">
+                      <div class="progress mt-2 rounded-0 w-10rem" style="width: 40%;height: 5px;">
+                        <div class="progress-bar bg-blue-600" style="width: 80%;"></div>
+                      </div>
+                      <span class="ms-auto small progress=1 text-gray-500">Tensor (80k)</span>
+                    </div>
+                  </div>
                 </div>
-            </div> -->
-        </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
+  </div>
 </div>
+
+<div class="sidebar-overlay" *ngIf="isSidebarOpen && !isLargeScreen" (click)="toggleSidebar()"></div>

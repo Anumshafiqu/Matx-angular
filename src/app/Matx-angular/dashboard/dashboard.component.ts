@@ -9,8 +9,52 @@ import { Product } from '../domain/product';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+
+  isSidebarOpen = true;
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
+
+
+  // isSidebarOpen: boolean = false;
+  isLargeScreen: boolean = window.innerWidth >= 992;
+
+  // Adjust the sidebar state on window resize
+  @HostListener('window:resize', ['$event'])
+  onResize() {
+    this.isLargeScreen = window.innerWidth >= 992;
+    if (this.isLargeScreen) {
+      this.isSidebarOpen = false; // Keep sidebar open on large screens
+    }
+  }
+
+  // Toggle sidebar visibility
+  // toggleSidebar() {
+  //   if (!this.isLargeScreen) {
+  //     this.isSidebarOpen = !this.isSidebarOpen;
+  //   }
+  // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   ngOnInit(): void {
-    this.updateSidebarState();
+    
     const documentStyle = getComputedStyle(document.documentElement);
     const textColor = documentStyle.getPropertyValue('--text-color');
 
@@ -26,7 +70,7 @@ export class DashboardComponent {
 
 
     this.options = {
-        cutout: '60%',
+        cutout: '80%',
         plugins: {
             legend: {
                 labels: {
@@ -64,11 +108,11 @@ export class DashboardComponent {
             label: 'Sales',
             data: [35, 44, 31, 45, 31, 42, 26, 43, 31, 45, 33, 39],
             borderColor: '#ffffff',
-            borderWidth: 2,
+            borderWidth: 1,
             fill: true,
             backgroundColor: 'rgba(255, 255, 255, 0.1)',
             pointBackgroundColor: '#ffffff',
-            pointRadius: 4,
+            pointRadius: 2,
             cubicInterpolationMode: 'monotone',
             tension: 0.4 // Smooth line curve
           }]
@@ -130,85 +174,41 @@ value: boolean | null = null;
 data: any;
 
 options: any;
-
-// ngOnInit() {
-    // const documentStyle = getComputedStyle(document.documentElement);
-    // const textColor = documentStyle.getPropertyValue('--text-color');
-
-    // this.data = {
-    //     labels: ['A', 'B', 'C'],
-    //     datasets: [
-    //         {
-    //             data: [300, 50, 100],
-    //             backgroundColor: [documentStyle.getPropertyValue('--blue-500'), documentStyle.getPropertyValue('--yellow-500'), documentStyle.getPropertyValue('--green-500')],
-    //             hoverBackgroundColor: [documentStyle.getPropertyValue('--blue-400'), documentStyle.getPropertyValue('--yellow-400'), documentStyle.getPropertyValue('--green-400')]
-    //         }
-    //     ]
-    // };
-
-
-    // this.options = {
-    //     cutout: '60%',
-    //     plugins: {
-    //         legend: {
-    //             labels: {
-    //                 color: textColor
-    //             }
-    //         }
-    //     }
-    // };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    progressValue = 50; // Set to any value from 0 to 100
-
-    // Optionally, create a method to update progress dynamically
+ progressValue = 50; 
     updateProgress(value: number) {
       this.progressValue = value;
     }
-    isCollapsed: boolean = true;
-    isLargeScreen: boolean = window.innerWidth >= 992; // Detect if it's a large screen initially
-  
-    // ngOnInit(): void {
-    //   this.updateSidebarState();
-    // }
-  
-    toggleSidebar() {
-      this.isCollapsed = !this.isCollapsed;
-    }
-  
-    @HostListener('window:resize', ['$event'])
-    onResize(event: any) {
-      this.isLargeScreen = event.target.innerWidth >= 992;
-      this.updateSidebarState();
-    }
-  
-    private updateSidebarState() {
-      // If on large screens, make sure the sidebar is always visible
-      if (this.isLargeScreen) {
-        this.isCollapsed = false;
-      } else {
-        this.isCollapsed = true;
-      }
-    }
+ 
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+  
+
 
 }
 
