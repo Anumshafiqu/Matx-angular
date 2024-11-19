@@ -234,76 +234,73 @@ export class AppComponent {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener('DOMContentLoaded', function () {
+//   Highcharts.chart('container', {
+//     chart: {
+//       type: 'spline',
+//       backgroundColor: '#8a4fff',
+//     },
+//     title: {
+//       text: 'Last 12 Months Sales',
+//       style: {
+//         color: '#8a4fff',
+//       }
+//     },
+//     xAxis: {
+//       categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+//       labels: {
+//         style: {
+//           color: '#ffffff',
+//           borderColor: '#8a4fff', 
+//           borderWidth: 2, 
+//           backgroundColor: '#f4f4f4',
+//           spacingTop: 20,
+//           spacingRight: 30, 
+//           spacingBottom: 40,
+//           spacingLeft: 50,
+//         }
+//       }
+//     },
+//     yAxis: {
+//       min: 10,
+//       max: 60,
+//       title: {
+//         text: null
+//       },
+//       labels: {
+//         style: {
+//           display: true,
+//           color: '#ffffff'
+//         }
+//       }
+//     },
+//     series: [
+//       {
+//         name: 'Sales',
+//         type: 'spline',
+//         data: [35, 44, 31, 45, 31, 42, 26, 43, 31, 45, 33, 39],
+//         color: '#ffffff',
+//         marker: {
+//           radius: 1,
+//           fillColor: '#ffffff',
+//           fillOpacity: 0.3 
+//         }
+//       }
+//     ],
+//     plotOptions: {
+//       spline: {
+//         lineWidth: 1,
+//         dataLabels: {
+//           enabled: false,
 
-  Highcharts.chart('container', {
-
-
-    chart: {
-      type: 'spline',
-      backgroundColor: '#8a4fff',
-    },
-    title: {
-      text: 'Last 12 Months Sales',
-      style: {
-        color: '#8a4fff',
-      }
-    },
-    xAxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      labels: {
-        style: {
-          color: '#ffffff',
-          borderColor: '#8a4fff', 
-          borderWidth: 2, 
-          backgroundColor: '#f4f4f4',
-          spacingTop: 20,
-          spacingRight: 30, 
-          spacingBottom: 40,
-          spacingLeft: 50,
-        }
-      }
-    },
-    yAxis: {
-      min: 10,
-      max: 60,
-      title: {
-        text: null
-      },
-      labels: {
-        style: {
-          display: true,
-          color: '#ffffff'
-        }
-      }
-    },
-    series: [
-      {
-        name: 'Sales',
-        type: 'spline',
-        data: [35, 44, 31, 45, 31, 42, 26, 43, 31, 45, 33, 39],
-        color: '#ffffff',
-        marker: {
-          radius: 1,
-          fillColor: '#ffffff',
-          fillOpacity: 0.3 
-        }
-      }
-    ],
-    plotOptions: {
-      spline: {
-        lineWidth: 1,
-        dataLabels: {
-          enabled: false,
-
-        }
-      }
-    },
-    credits: {
-      enabled: false,
-    }
-  });
-});
+//         }
+//       }
+//     },
+//     credits: {
+//       enabled: false,
+//     }
+//   });
+// });
 
 
 
@@ -317,99 +314,98 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 // temperature
+document.addEventListener('DOMContentLoaded', () => {
+  const chartOptions: Highcharts.Options = {
+    chart: {
+      type: 'spline',
+      inverted: true,
+      backgroundColor: '#8a4fff',
+      borderColor: '#ffffff'
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const chartOptions: Highcharts.Options = {
-//     chart: {
-//       type: 'spline',
-//       inverted: true,
-//       backgroundColor: '#8a4fff',
-//       borderColor: '#ffffff'
+    },
+    title: {
+      align: 'left',
+      style: {
+        color: '#ffffff',
+        fontSize: '16px',
+      },
 
-//     },
-//     title: {
-//       align: 'left',
-//       style: {
-//         color: '#ffffff',
-//         fontSize: '16px',
-//       },
+    },
+    subtitle: {
+      align: 'left',
+    },
+    xAxis: {
+      reversed: false,
+      title: {
+        text: 'Altitude',
+        style: {
+          color: '#ffffff',
+          fontSize: '16px',
+        },
+      },
+      labels: {
+        format: '{value} km',
+        style: {
+          color: 'white'
+        }
+      },
+      accessibility: {
+        rangeDescription: 'Range: 0 to 80 km.',
+      },
+      maxPadding: 0.05,
+      showLastLabel: true,
+    },
+    yAxis: {
+      title: {
+        text: 'Temperature',
+        style: {
+          color: '#ffffff',
+          fontSize: '16px',
+        },
+      },
+      labels: {
+        format: '{value}°',
+        style: {
+          color: '#ffffff',
+        },
+      },
+      accessibility: {
+        rangeDescription: 'Range: -90°C to 20°C.',
+      },
+      lineWidth: 2,
+    },
+    legend: {
+      enabled: false,
+    },
+    tooltip: {
+      headerFormat: '<b>{series.name}</b><br/>',
+      pointFormat: '{point.x} km: {point.y}°C',
+      style: {
+        color: '#000000',
+      },
+    },
+    plotOptions: {
+      spline: {
+        marker: {
+          enabled: false,
+        },
+      },
+    },
+    series: [
+      {
+        name: 'Temperature',
+        data: [
+          [0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
+          [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5],
+        ],
+        color: '#ffffff',
+        type: 'spline',
+      },
+    ],
+  };
 
-//     },
-//     subtitle: {
-//       align: 'left',
-//     },
-//     xAxis: {
-//       reversed: false,
-//       title: {
-//         text: 'Altitude',
-//         style: {
-//           color: '#ffffff',
-//           fontSize: '16px',
-//         },
-//       },
-//       labels: {
-//         format: '{value} km',
-//         style: {
-//           color: 'white'
-//         }
-//       },
-//       accessibility: {
-//         rangeDescription: 'Range: 0 to 80 km.',
-//       },
-//       maxPadding: 0.05,
-//       showLastLabel: true,
-//     },
-//     yAxis: {
-//       title: {
-//         text: 'Temperature',
-//         style: {
-//           color: '#ffffff',
-//           fontSize: '16px',
-//         },
-//       },
-//       labels: {
-//         format: '{value}°',
-//         style: {
-//           color: '#ffffff',
-//         },
-//       },
-//       accessibility: {
-//         rangeDescription: 'Range: -90°C to 20°C.',
-//       },
-//       lineWidth: 2,
-//     },
-//     legend: {
-//       enabled: false,
-//     },
-//     tooltip: {
-//       headerFormat: '<b>{series.name}</b><br/>',
-//       pointFormat: '{point.x} km: {point.y}°C',
-//       style: {
-//         color: '#000000',
-//       },
-//     },
-//     plotOptions: {
-//       spline: {
-//         marker: {
-//           enabled: false,
-//         },
-//       },
-//     },
-//     series: [
-//       {
-//         name: 'Temperature',
-//         data: [
-//           [0, 15], [10, -50], [20, -56.5], [30, -46.5], [40, -22.1],
-//           [50, -2.5], [60, -27.7], [70, -55.7], [80, -76.5],
-//         ],
-//         color: '#ffffff',
-//         type: 'spline',
-//       },
-//     ],
-//   };
-
-//   Highcharts.chart('container', chartOptions);
-// });
+  Highcharts.chart('container', chartOptions);
+});
 
 
 
